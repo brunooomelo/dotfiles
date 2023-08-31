@@ -38,6 +38,9 @@ ln -sf "$PWD/configs/.zshrc" ~/
 # tmux
 ln -sf "$PWD/tmux/.tmux.conf" ~/
 
+# yabai
+ln -sf "$PWD/yabai/.yabairc" ~/
+
 # nvim
 ln -sf "$PWD/nvim" ~/.config
 
