@@ -4,7 +4,7 @@ export LANG=en_US.UTF-8
 
 # Set name of the theme to load --- if set to "random", it will be random
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="dstufft"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -13,21 +13,13 @@ plugins=(git tmux rust nvm)
 
 source $ZSH/oh-my-zsh.sh
 
-# ANDROID_SDK
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
+# export GPG_TTY=$(tty)
+
 
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-export GPG_TTY=$(tty)
-
 # alias
 alias np="pnpm"
-alias szsh="source ~/.zshrc"
-alias vi="nvim"
-alias vim="nvim"
