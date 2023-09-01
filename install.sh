@@ -44,5 +44,7 @@ ln -sf "$PWD/yabai/.yabairc" ~/
 # nvim
 ln -sf "$PWD/nvim" ~/.config
 
+# skhd
+ln -sf "$PWD/skhd/.skhdrc" ~/
 
 echo "installed 🔥"
