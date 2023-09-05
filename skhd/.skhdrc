@@ -86,9 +86,8 @@ shift + alt - 7 : yabai -m window --space 7;
 
 
 # start and stopping yabai
-ctrl + alt - q : yabai --stop-service
-ctrl + alt - s : yabai --start-service
-
+ctrl + alt - q : yabai --stop-service;osascript -e 'display notification "yabai stop service 🛑"';
+ctrl + alt - s : yabai --start-service;osascript -e 'display notification "yabai start service 🔥"';
 
 
 
