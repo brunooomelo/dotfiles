@@ -11,4 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "brunooomelo.plugins" })
+require("lazy").setup({
+  { import = "brunooomelo.plugins" },
+  { import = "brunooomelo.plugins.lsp" }
+}, {
+  install = {
+    colorscheme = { "nightfly" }
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false
+  },
+})

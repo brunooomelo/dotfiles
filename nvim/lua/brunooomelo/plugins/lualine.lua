@@ -55,16 +55,22 @@ return {
     lualine.setup({
       options = {
         theme = my_lualine_theme,
-	component_separators = { left = '', right = '' },
-	section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = ''},
       },
       sections = {
-	lualine_a = {'mode'},
-	lualine_b = {'filename'},
-	lualine_c = {},
-        lualine_x =  {'branch'},
-	lualine_y = {'filetype'},
-	lualine_z = {}
+        lualine_a = {'mode'},
+        lualine_b = {'filename'},
+        lualine_c = {},
+        lualine_x =  {
+          { 
+            lazy_status.updates,
+            cond = lazy_status.has_updates,
+            color = { fg = "#ff9e64" },
+          }, 
+          {'branch'}},
+        lualine_y = {'filetype'},
+        lualine_z = {}
       },
     })
   end,
