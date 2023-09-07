@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# brew install, need check if brew and ripgrep is installed
+
+brew install ripgrep
 
 # backup 
 backup_folder="$PWD/.backup/"
