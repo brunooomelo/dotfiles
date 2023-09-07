@@ -9,12 +9,11 @@ ZSH_THEME="dstufft"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git tmux rust nvm)
+plugins=(git tmux rust nvm golang zsh-vi-mode vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
 # export GPG_TTY=$(tty)
-
 
 # NVM Configuration
 export NVM_DIR="$HOME/.nvm"
@@ -22,4 +21,21 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # alias
+alias vi="nvim"
 alias np="pnpm"
+alias sourcezsh="source ~/.zshrc; echo 'zsh loaded 🔥'"
+alias dotfiles="cd ~/sideprojects/dotfiles"
+
+# open PR on github
+pr () {
+    if type gh &> /dev/null; then
+      gh pr view -w
+    else
+	echo "gh is not installed"
+    fi
+}
+
+# open search my shell history
+fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
