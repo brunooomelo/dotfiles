@@ -22,10 +22,24 @@ export NVM_DIR="$HOME/.nvm"
 
 # alias
 alias vi="nvim"
-alias np="pnpm"
+# alias np="pnpm"
 alias sourcezsh="source ~/.zshrc; echo 'zsh loaded 🔥'"
 alias dotfiles="cd ~/sideprojects/dotfiles"
 
+# determine package manager and run command with it 
+np() {
+  if [[ -f bun.lockb ]]; then
+    command bun "$@"
+  elif [[ -f pnpm-lock.yaml ]]; then
+    command pnpm "$@"
+  elif [[ -f yarn.lock ]]; then
+    command yarn "$@"
+  elif [[ -f package-lock.json ]]; then
+    command npm "$@"
+  else
+    command pnpm "$@"
+  fi
+}
 # open PR on github
 pr () {
     if type gh &> /dev/null; then
