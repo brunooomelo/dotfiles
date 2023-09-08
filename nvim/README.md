@@ -1,6 +1,28 @@
 
 ## keymaps
 
+## LSP
+
+- NORMAL MODE
+```help
+ 
+`gR` - Show LSP references
+`gD` - Go to declaration
+`gd` - Show LSP definitions
+`gi` - Show LSP implementations
+`gt` - Show LSP type definitions
+`<leader>ca` - See available code actions
+`<leader>rn` - Smart rename
+`<leader>D` - Show buffer diagnostics
+`[d` - Go to previous diagnostic
+`]d` - Go to next diagnostic
+`K` - Show documentation for what is under cursor
+`<leader>rs` - Restart LSP
+```
+- VIRTUAL MODE
+```help
+`<leader>ca` - See available code actions
+```
 
 ## comment.nvim
 
