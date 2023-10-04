@@ -44,7 +44,7 @@ yabai -m rule --add app="^OpenVPN Connect$" manage=off
 yabai -m rule --add app="^Beekeeper Studio$" manage=off
 yabai -m rule --add app="^MongoDB Compass$" manage=off
 yabai -m rule --add label="^Software Update$" title="Software Update" manage=off
+yabai -m rule --add label="^Notes$" title="Notes" manage=off
+yabai -m rule --add label="^Calendar$" title="Calendar" manage=off
 yabai -m rule --add label="^About This Mac$" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add label="^Notes$" manage=off
 yabai -m rule --add label="^Archive Utility$" manage=off
-yabai -m rule --add label="^Calendar$" manage=off
