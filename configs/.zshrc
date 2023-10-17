@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export LANG=en_US.UTF-8
 
+export GOPATH=$HOME/go
 # Set name of the theme to load --- if set to "random", it will be random
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="dstufft"
@@ -22,8 +23,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # alias
 alias vi="nvim"
+alias v="nvim"
+alias goworkspace="cd ~/go/src/github.com/brunooomelo/"
 # alias np="pnpm"
-alias sourcezsh="source ~/.zshrc; echo 'zsh loaded 🔥'"
+alias reloadzsh="source ~/.zshrc; echo 'zsh loaded 🔥'"
 alias dotfiles="cd ~/sideprojects/dotfiles"
 
 # determine package manager and run command with it 
