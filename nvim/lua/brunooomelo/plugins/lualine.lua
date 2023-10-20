@@ -5,13 +5,13 @@ return {
 	event = { "BufReadPost", "BufNewFile", "VeryLazy" },
 	opts = {
 		icons_enabled = false,
-		component_separators = "|",
+		component_separators = "",
 		section_separators = "",
 	},
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-		local custom_onelight = require("lualine.themes.onelight")
+		local custom_onelight = require("lualine.themes.nightfly")
 
 		-- configure lualine with modified theme
 		lualine.setup({

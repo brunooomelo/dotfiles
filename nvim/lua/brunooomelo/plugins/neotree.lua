@@ -4,6 +4,25 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
+		{
+			"s1n7ax/nvim-window-picker",
+			version = "2.*",
+			config = function()
+				require("window-picker").setup({
+					filter_rules = {
+						include_current_win = false,
+						autoselect_one = true,
+						-- filter using buffer options
+						bo = {
+							-- if the file type is one of following, the window will be ignored
+							filetype = { "neo-tree", "neo-tree-popup", "notify" },
+							-- if the buffer type is one of following, the window will be ignored
+							buftype = { "terminal", "quickfix" },
+						},
+					},
+				})
+			end,
+		},
 	},
 	event = "VeryLazy",
 	keys = {
@@ -12,46 +31,10 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
-			close_if_last_window = false,
-			popup_border_style = "single",
-			enable_git_status = true,
-			enable_modified_markers = true,
-			enable_diagnostics = false,
-			sort_case_insensitive = true,
-			default_component_configs = {
-				indent = {
-					with_markers = false,
-					with_expanders = true,
-				},
-				modified = {
-					symbol = " ",
-					highlight = "NeoTreeModified",
-				},
-				icon = {
-					folder_closed = "",
-					folder_open = "",
-					folder_empty = "",
-					folder_empty_open = "",
-				},
-				git_status = {
-					symbols = {
-						-- Change type
-						added = "",
-						deleted = "",
-						modified = "",
-						renamed = "",
-						-- Status type
-						untracked = "",
-						ignored = "",
-						unstaged = "",
-						staged = "",
-						conflict = "",
-					},
-				},
-			},
+			popup_border_style = "rounded",
 			window = {
 				position = "right",
-				width = 35,
+				width = 40,
 				mappings = {
 					["o"] = { "open", nowait = true },
 				},
@@ -70,24 +53,24 @@ return {
 					},
 				},
 			},
-			-- event_handlers = {
-			-- 	{
-			-- 		event = "neo_tree_window_after_open",
-			-- 		handler = function(args)
-			-- 			if args.position == "left" or args.position == "right" then
-			-- 				vim.cmd("wincmd =")
-			-- 			end
-			-- 		end,
-			-- 	},
-			-- 	{
-			-- 		event = "neo_tree_window_after_close",
-			-- 		handler = function(args)
-			-- 			if args.position == "left" or args.position == "right" then
-			-- 				vim.cmd("wincmd =")
-			-- 			end
-			-- 		end,
-			-- 	},
-			-- },
+			event_handlers = {
+				{
+					event = "neo_tree_window_after_open",
+					handler = function(args)
+						if args.position == "left" or args.position == "right" then
+							vim.cmd("wincmd =")
+						end
+					end,
+				},
+				{
+					event = "neo_tree_window_after_close",
+					handler = function(args)
+						if args.position == "left" or args.position == "right" then
+							vim.cmd("wincmd =")
+						end
+					end,
+				},
+			},
 		})
 	end,
 }
