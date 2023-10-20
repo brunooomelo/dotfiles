@@ -4,6 +4,8 @@
 
 brew install ripgrep
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # backup 
 backup_folder="$PWD/.backup/"
 gitconfig="$HOME/.gitconfig"
