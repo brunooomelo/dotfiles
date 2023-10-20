@@ -11,14 +11,13 @@ return {
 			typescript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
-			json = { "jsonlint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 		vim.api.nvim_create_autocmd({
-			"BufEnter",
+			-- "BufEnter",
 			"BufWritePost",
-			"InsertLeave",
+			-- "InsertLeave",
 		}, {
 			group = lint_augroup,
 			callback = function()
@@ -31,4 +30,3 @@ return {
 		end, { desc = "Trigger linting for current file" })
 	end,
 }
-

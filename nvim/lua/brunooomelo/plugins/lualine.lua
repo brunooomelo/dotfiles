@@ -3,6 +3,11 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	lazy = true,
 	event = { "BufReadPost", "BufNewFile", "VeryLazy" },
+	opts = {
+		icons_enabled = false,
+		component_separators = "|",
+		section_separators = "",
+	},
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
@@ -16,9 +21,9 @@ return {
 				section_separators = { left = "", right = "" },
 			},
 			sections = {
-				lualine_a = { "mode" },
-				lualine_b = { "filename" },
-				lualine_c = {},
+				lualine_a = { "buffers" },
+				lualine_b = { "mode" },
+				lualine_c = { "filename" },
 				lualine_x = {
 					{
 						lazy_status.updates,
