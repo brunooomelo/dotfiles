@@ -23,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 
 PROMPT='%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}%~%{$reset_color%}$(git_prompt_info)
 $(virtualenv_info)'
-PROMPT+='% ⚡️ %'
+PROMPT+=' ⚡️ '
 
 # alias
 alias vi="nvim"
