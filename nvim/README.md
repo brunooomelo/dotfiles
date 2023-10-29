@@ -1,6 +1,22 @@
 
 ## keymaps
 
+```help
+`K`, `J` - keep cursor centered when scrolling
+`<leader>w` - save file
+`<leader>q - close file
+`<`,`>` - better indenting
+`jj`, `jk` - exit on jj and jk
+`L` - move to end of line
+`H` - move to start of line
+`tk` - navigate the next buffer
+`tj` - navigate the previous buffer
+`th` - navigate the first buffer
+`tl` - navigate the last buffer
+`td` - delete buffer
+`ss` - remove highlight
+```
+
 ## LSP
 
 - NORMAL MODE
@@ -18,6 +34,8 @@
 `]d` - Go to next diagnostic
 `K` - Show documentation for what is under cursor
 `<leader>rs` - Restart LSP
+`<leader>l` - try linting
+`<leader>mp - format code
 ```
 - VIRTUAL MODE
 ```help
