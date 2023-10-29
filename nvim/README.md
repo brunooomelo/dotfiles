@@ -34,6 +34,8 @@
 `]d` - Go to next diagnostic
 `K` - Show documentation for what is under cursor
 `<leader>rs` - Restart LSP
+`<leader>l` - try linting
+`<leader>mp - format code
 ```
 - VIRTUAL MODE
 ```help
