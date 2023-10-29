@@ -21,10 +21,11 @@ return {
 				section_separators = { left = "", right = "" },
 			},
 			sections = {
-				lualine_a = { "buffers" },
-				lualine_b = { "mode" },
-				lualine_c = { "filename" },
-				lualine_x = {
+				lualine_b = { "buffers" },
+				lualine_a = { "mode" },
+				lualine_c = {},
+				lualine_x = {},
+				lualine_y = {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
@@ -32,8 +33,7 @@ return {
 					},
 					{ "branch" },
 				},
-				lualine_y = { "filetype" },
-				lualine_z = {},
+				lualine_z = { "filetype" },
 			},
 		})
 	end,
