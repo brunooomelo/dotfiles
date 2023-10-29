@@ -48,3 +48,4 @@ yabai -m rule --add label="^Notes$" title="Notes" manage=off
 yabai -m rule --add label="^Calendar$" title="Calendar" manage=off
 yabai -m rule --add label="^About This Mac$" app="System Information" title="About This Mac" manage=off
 yabai -m rule --add label="^Archive Utility$" manage=off
+yabai -m rule --add label="^TickTick$" title="TickTick" manage=off
