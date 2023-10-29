@@ -1,6 +1,7 @@
 
 ## keymaps
 
+```help
 `K`, `J` - keep cursor centered when scrolling
 `<leader>w` - save file
 `<leader>q - close file
@@ -13,8 +14,8 @@
 `th` - navigate the first buffer
 `tl` - navigate the last buffer
 `td` - delete buffer
-
 `ss` - remove highlight
+```
 
 ## LSP
 
