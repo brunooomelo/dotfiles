@@ -52,4 +52,7 @@ ln -sf "$PWD/nvim" ~/.config
 # skhd
 ln -sf "$PWD/skhd/.skhdrc" ~/
 
+# kitty
+ln -sf "$PWD/kitty/kitty.conf" ~/.config/kitty/
+
 echo "installed 🔥"
