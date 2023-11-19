@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "brunooomelo.plugins" },
 	{ import = "brunooomelo.plugins.lsp" },
-	"xiyaowong/nvim-transparent",
 }, {
 	install = {},
 	checker = {

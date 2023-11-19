@@ -22,19 +22,20 @@ map("v", ">", ">gv")
 map("i", "jj", "<ESC>", opts)
 map("i", "jk", "<ESC>", opts)
 
+-- Delete a word backwards
+map("n", "dw", "vb_d")
+
+-- Select all
+map("n", "<C-a>", "gg<S-v>G")
+
 -- Move to start/end of line
 map({ "n", "x", "o" }, "H", "^", opts)
 map({ "n", "x", "o" }, "L", "$", opts)
 
 -- Navigate in buffers
-map("n", "tk", ":bnext<CR>", opts)
-map("n", "tj", ":bprev<CR>", opts)
-map("n", "th", ":bfirst<CR>", opts)
-map("n", "tl", ":blast<CR>", opts)
+map("n", "<tab>", ":bnext<CR>", opts)
+map("n", "<s-tab>", ":bprev<CR>", opts)
 map("n", "td", ":bdelete<CR>", opts)
-
--- Transparent Toggle
-map("n", "TT", ":TransparentToggle<CR>", opts)
 
 -- Remove highlight
 map("n", "ss", ":noh<CR>", opts)
@@ -44,3 +45,10 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- trouble
 map("n", "<F2>", "<cmd>TroubleToggle<cr>", opts)
+
+-- todo trouble
+map("n", "tt", ":TodoTrouble<CR>", opts)
+
+-- LSP diagnostic
+map("n", "<leader>[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+map("n", "<leader>]", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)

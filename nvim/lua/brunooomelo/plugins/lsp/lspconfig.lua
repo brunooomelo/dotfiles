@@ -10,7 +10,7 @@ return {
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap.set
 		local opts = { noremap = true, silent = true }
-		local on_attach = function(client, bufnr)
+		local on_attach = function(_, bufnr)
 			opts.buffer = bufnr
 
 			opts.desc = "Show LSP references"
@@ -100,14 +100,25 @@ return {
 		lspconfig["graphql"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact", "javascript", "typescript" },
 		})
 
 		-- configure emmet language server
 		lspconfig["emmet_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			filetypes = {
+				"html",
+				"typescriptreact",
+				"javascriptreact",
+				"javascript",
+				"typescript",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
 		})
 
 		-- configure python server
