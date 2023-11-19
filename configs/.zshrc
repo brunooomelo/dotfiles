@@ -5,12 +5,12 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/go
 # Set name of the theme to load --- if set to "random", it will be random
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="amuse"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git tmux rust nvm golang zsh-vi-mode vi-mode fzf nvm)
+plugins=(git tmux rust nvm golang fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,9 +29,9 @@ export NVM_DIR="$HOME/.nvm"
 alias vi="nvim"
 alias v="nvim"
 alias goworkspace="cd ~/go/src/github.com/brunooomelo/"
-# alias np="pnpm"
 alias reloadzsh="source ~/.zshrc; echo 'zsh loaded 🔥'"
 alias dotfiles="cd ~/sideprojects/dotfiles"
+alias z="fg"
 
 # zen mode
 set ZEN_MODE = false
